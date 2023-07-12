@@ -14,28 +14,20 @@ const Board = ({
   setTies,
   ties,
 }) => {
-  // Creating a data state, which contains the
-  // current picture of the board
   const [data, setData] = useState(["", "", "", "", "", "", "", "", ""]);
 
-  // Creating a reference for the board
   const boardRef = useRef(null);
 
-  // Function to draw on the board
   const draw = (event, index) => {
-    // Draws only if the position is not taken
-    // and winner is not decided yet
     if (data[index - 1] === "" && winner === -1) {
-      // Draws X if it's player 1's turn else draws O
+      // X if it's player 1's turn else O
       const current = turn === 0 ? "X" : "O";
       const style = turn === 0 ? "input1" : "input2";
 
-      // Updating the data state
+      // Updating the board state
       data[index - 1] = current;
 
-      //Drawing on the board
       event.target.innerText = current;
-      //   event.target.style.color = color;
 
       // Hover state styles
       event.target.classList.add(style);
@@ -45,33 +37,24 @@ const Board = ({
     }
   };
 
-  // UseEffect hook used to reset the board whenever
-  // a winner is decided
   useEffect(() => {
-    // Clearing the data state
     setData(["", "", "", "", "", "", "", "", ""]);
 
-    // Getting all the children(cells) of the board
     const cells = boardRef.current.children;
 
-    // Clearing out the board
     for (let i = 0; i < 9; i++) {
       cells[i].innerText = "";
       cells[i].classList.remove("input1");
       cells[i].classList.remove("input2");
     }
 
-    // Resetting the turn to player 0
     setTurn(0);
 
-    // Resetting the winner
     setWinner(-1);
     setReset(false);
   }, [reset, setReset, setWinner]);
 
-  // useEffect hook used to check for a winner
   useEffect(() => {
-    // Checks for the win condition in rows
     const checkRow = () => {
       let ans = false;
       for (let i = 0; i < 9; i += 3) {
@@ -115,11 +98,9 @@ const Board = ({
       return count === 9;
     };
 
-    // Setting the winner in case of a win
     if (checkWin()) {
       setWinner(turn === 0 ? 2 : 1);
     } else if (checkTie()) {
-      // Setting the winner to tie in case of a tie
       setWinner(0);
     }
   }, [turn]);
