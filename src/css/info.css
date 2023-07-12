@@ -1,0 +1,65 @@
+.info {
+  width: 30vw;
+  height: 65px;
+  gap: 8%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: whitesmoke;
+  text-align: center;
+  gap: 5%;
+  justify-content: center;
+}
+
+.player {
+  border: 2px solid #f6546a;
+  border-radius: 5%;
+  padding: 0.5rem 0;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+}
+.infoBox {
+  width: 30%;
+  /* height: 64px; */
+  height: 100%;
+  /* height: 30%; */
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: center;
+}
+
+.infoBox.x {
+  background: #31c3bd;
+  color: #1a2a33;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.infoBox.TIES {
+  background: #a8bfc9;
+}
+
+.infoBox.o {
+  background: #f2b137;
+}
+.reset {
+  background-color: #a8bfc9;
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  align-items: center;
+  width: 15%;
+  height: 52px;
+  color: #1f3641;
+  border-radius: 14px;
+  box-shadow: 0px 4px #10212a;
+  font-weight: 900;
+  font-size: 25px;
+}
