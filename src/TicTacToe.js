@@ -33,7 +33,6 @@ function TicTacToe() {
   };
 
   useEffect(() => {
-    console.log("winner", winner);
     if (winner === 0) {
       setTies((ties) => ties + 1);
     } else if (winner === 1) {

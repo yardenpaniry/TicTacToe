@@ -30,8 +30,6 @@ const Login = () => {
         let res = await response.json();
         setToken(res.token);
 
-        console.log("token", token);
-
         navigate("/TicTacToe");
       } else {
         alert("user/password incorrect");
