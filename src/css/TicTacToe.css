@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1vh;
+  gap: 2vh;
   backdrop-filter: 5px;
   background-color: #1a2a33;
   font-family: "Outfit", sans-serif;
@@ -98,7 +98,7 @@ button {
   /*padding-right: 2%; */
   align-items: center;
   width: 30vw;
-  margin-bottom: 1%;
+  /* margin-bottom: 1%; */
 }
 .XOdisplay {
   display: flex;
