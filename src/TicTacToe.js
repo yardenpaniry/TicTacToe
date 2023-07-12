@@ -19,7 +19,6 @@ function TicTacToe() {
   const [ties, setTies] = useState(0);
 
   const [restart, setRestart] = useState(false);
-  const [confirmRestart, setConfirmRestart] = useState(false);
 
   const resetBoard = () => {
     setReset(true);
