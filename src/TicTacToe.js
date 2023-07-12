@@ -103,6 +103,7 @@ function TicTacToe() {
           <span>&#x21bb;</span>
         </div>
       </div>
+
       <Board
         reset={reset}
         setReset={setReset}
@@ -116,6 +117,7 @@ function TicTacToe() {
         setTies={setTies}
         ties={ties}
       />
+
       <Info ties={ties} xWins={xWins} oWins={oWins} />
     </div>
   );
