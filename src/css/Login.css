@@ -52,3 +52,9 @@ button.LoginSubmit {
 h1.LoginPageTitle {
   color: #a8bfc9;
 }
+@media (max-width: 1000px) {
+  .LoginBox {
+    width: 90vw;
+    padding: 10%;
+  }
+}

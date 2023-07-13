@@ -169,3 +169,8 @@ button.nextButton {
 .big-winner {
   font-size: 70px;
 }
+@media (max-width: 1000px) {
+  .topButtons {
+    width: 80vw;
+  }
+}
