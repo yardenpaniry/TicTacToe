@@ -51,7 +51,7 @@
     1px 1px 0 #f2b137;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
   .board {
     width: 80vw;
   }
